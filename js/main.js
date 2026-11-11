@@ -10,8 +10,6 @@
     "Up to 30 Lakhs",
     "Above 30 Lakhs"
   ];
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
@@ -52,40 +50,12 @@
     });
   }
 
-  setupQuotePrompt();
   setupBudget();
   setupOthers(document.getElementById("quote-location"), document.getElementById("quote-other-wrap"), document.getElementById("quote-location-other"));
   setupPhone(document.getElementById("quote-phone"));
   setupPhone(document.getElementById("brochure-phone"));
   setupQuoteForm();
   setupBrochure();
-
-  function setupQuotePrompt() {
-    var prompt = document.getElementById("quote-prompt");
-    if (!prompt || sessionStorage.getItem("homegear-quote-prompt")) return;
-    sessionStorage.setItem("homegear-quote-prompt", "1");
-    prompt.hidden = false;
-    prompt.classList.add(reduceMotion ? "is-hold" : "is-in");
-    var hideTimer = window.setTimeout(hide, 3000);
-    prompt.addEventListener("click", function () {
-      window.clearTimeout(hideTimer);
-      prompt.hidden = true;
-      var quote = document.getElementById("quote");
-      if (quote) quote.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
-      var phone = document.getElementById("quote-phone");
-      if (phone) phone.focus();
-    });
-
-    function hide() {
-      if (reduceMotion) {
-        prompt.hidden = true;
-        return;
-      }
-      prompt.classList.remove("is-in");
-      prompt.classList.add("is-out");
-      window.setTimeout(function () { prompt.hidden = true; }, 450);
-    }
-  }
 
   function setupBudget() {
     var slider = document.getElementById("quote-budget");

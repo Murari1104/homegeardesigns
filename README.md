@@ -158,7 +158,6 @@ The brochure PDF is about 62 MB. The first download on a slow connection will ta
 - [ ] Desktop (about 1440px): header, spaces, decor grid, quote form and contact line up.
 - [ ] Logo is readable on the light header and the dark footer. Favicon shows in the tab.
 - [ ] Phones open the dialer. Email opens Gmail compose in a new tab. Instagram opens in a new tab. WhatsApp opens a chat to +91 96861 89742.
-- [ ] Get Quote prompt appears once per browser session for about 3 seconds and scrolls to the form.
 - [ ] Quote form rejects a short phone, a number starting with 0–5, a missing city, and an empty Others box. A valid 10-digit number starting with 6–9 submits once (button disables while sending).
 - [ ] Google Sheet gains a row: timestamp, source `quote`, name, phone, location, budget, page.
 - [ ] homegeardesigns@gmail.com receives that lead.

@@ -439,35 +439,6 @@ input[type="range"] {
 }
 .whatsapp-float svg { width: 26px; height: 26px; fill: currentColor; }
 
-.quote-prompt {
-  position: fixed;
-  z-index: 70;
-  left: 50%;
-  top: 46%;
-  transform: translate(-50%, -46%);
-  min-width: min(280px, calc(100% - 32px));
-  min-height: 72px;
-  padding: 22px 36px;
-  border: 1px solid var(--gold-text);
-  background: var(--paper);
-  color: var(--ink);
-  box-shadow: 0 16px 40px rgba(48, 41, 35, 0.18);
-  cursor: pointer;
-  font: 500 28px/1 var(--serif);
-  opacity: 0;
-}
-.quote-prompt.is-in { animation: quote-in 0.4s ease forwards; }
-.quote-prompt.is-hold { opacity: 1; }
-.quote-prompt.is-out { animation: quote-out 0.45s ease forwards; }
-@keyframes quote-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes quote-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
 dialog {
   position: relative;
   border: 0;
@@ -572,7 +543,6 @@ dialog::backdrop { background: rgba(35, 30, 25, 0.74); }
   .service-item, .service-item:nth-child(even) { border-left: 0; padding-left: 0; }
   .product-photo { height: 230px; }
   .hero-scroll span { display: none; }
-  .quote-prompt { font-size: 24px; padding: 18px 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -583,8 +553,4 @@ dialog::backdrop { background: rgba(35, 30, 25, 0.74); }
     transition-duration: 0.01ms !important;
   }
   .brochure-btn { animation: none; box-shadow: 0 0 0 3px rgba(173, 149, 100, 0.45); }
-  .quote-prompt.is-in, .quote-prompt.is-hold, .quote-prompt.is-out {
-    animation: none;
-    opacity: 1;
-  }
 }
