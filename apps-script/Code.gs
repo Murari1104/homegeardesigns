@@ -8,7 +8,7 @@
  * The website sends JSON as text/plain (no CORS preflight).
  */
 
-var NOTIFY_EMAIL = "homegeardesigns@gmail.com";
+var NOTIFY_EMAIL = "murariu.1104@gmail.com";
 var SHEET_NAME = "Leads";
 var HEADERS = ["timestamp", "source", "name", "phone", "location", "budget", "page"];
 
